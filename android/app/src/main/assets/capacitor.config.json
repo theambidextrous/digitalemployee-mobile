@@ -1,0 +1,9 @@
+{
+  "appId": "com.familybank.de",
+  "appName": "Digital Employee",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "www",
+  "windowsAndroidStudioPath": "C:\\Program Files\\Android\\Android Studio\\bin\\studio64.exe",
+  "cordova": {}
+}

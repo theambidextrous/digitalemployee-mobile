@@ -1,0 +1,119 @@
+<ion-header>
+  <ion-toolbar color="de">
+    <ion-title>Dashboard</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-menu-button routerLink="/cashout">
+        <ion-icon name="wallet" item-right></ion-icon>
+      </ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <!-- card -->
+    <ion-card class="card-content">
+      <ion-card-header>
+        <ion-card-subtitle class="spc-top center">You've made it!</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content class="crd center">
+        Hallo {{displaySessionData?.logged_user?.first_name}}, Here is your wallet balance.
+      </ion-card-content>
+      <ion-card-header>
+        <ion-card-title color="de center crd">
+          <ion-icon name="wallet"></ion-icon>
+          <ion-label> KES 1,000</ion-label>
+        </ion-card-title>
+        <ion-card-title color="de center">
+          <ion-button class="button-outline btn-custom" color="de" (click)="navToCashoutPage()">
+            <ion-icon name="exit"> </ion-icon>
+             Withdraw</ion-button>
+        </ion-card-title>
+      </ion-card-header>
+      <ion-card-title color="de center">
+        <ion-label class="center small">Recent Deposits</ion-label>
+      </ion-card-title>
+      <ion-grid class="grid-content center">
+        <ion-row>
+          <ion-col>
+            Trnx ID
+          </ion-col>
+          <ion-col>
+            Amount
+          </ion-col>
+          <ion-col>
+            Date
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            45643634
+          </ion-col>
+          <ion-col>
+            23,500
+          </ion-col>
+          <ion-col>
+            12/12/2020
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            45643634
+          </ion-col>
+          <ion-col>
+            23,500
+          </ion-col>
+          <ion-col>
+            12/12/2020
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            45643634
+          </ion-col>
+          <ion-col>
+            23,500
+          </ion-col>
+          <ion-col>
+            12/12/2020
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            45643634
+          </ion-col>
+          <ion-col>
+            23,500
+          </ion-col>
+          <ion-col>
+            12/12/2020
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            45643634
+          </ion-col>
+          <ion-col>
+            23,500
+          </ion-col>
+          <ion-col>
+            12/12/2020
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-button class="button-outline btn-custom" color="de" (click)="navToCashoutPage()">
+              <ion-icon name="expand"></ion-icon>
+              View all Active
+            </ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+    <!-- end card -->
+  </div>
+</ion-content>

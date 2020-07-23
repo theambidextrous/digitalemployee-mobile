@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "@ionic/app-scripts": "0.0.46"
+  },
+  "name": "DeFrontEnd",
+  "proxies": [
+    {
+      "path": "/api/v0/",
+      "proxyUrl": "http://127.0.0.1:5000/api/v0/"
+    }
+  ],
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,13 @@
+ion-app{
+    --ion-background-color:#ffffff;
+    --ion-ios-background-color:#ffffff;
+    --ion-android-background-color:#ffffff;
+}
+.ion-content {
+    --offset-bottom: auto!important;
+    --overflow: hidden!important;
+    overflow: auto !important;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    }

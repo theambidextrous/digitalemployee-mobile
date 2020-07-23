@@ -1,0 +1,132 @@
+<ion-menu menuId="main-menu" content-id="main">
+  <!-- header -->
+  <ion-header>
+    <ion-toolbar color="de">
+      <ion-title>Navigation</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <!-- end header -->
+
+  <!-- content -->
+  <ion-content>
+    <ion-list>
+      <ion-item-group>
+        <ion-menu-toggle>
+          <ion-item color="delight" routerLink="/home">
+            <ion-avatar class="avatar-img">
+              <img class="center" src="{{statics_path + displaySessionData?.logged_user?.image_file}}">
+            </ion-avatar>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item color="delight" routerLink="/home">
+            <ion-label class="center">{{displaySessionData?.logged_user?.first_name}} {{displaySessionData?.logged_user?.middle_name}} {{displaySessionData?.logged_user?.sir_name}}
+              <br><span class="tiny">{{displaySessionData?.logged_user?.email}}</span>
+            </ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-item-group>
+      <ion-item-group>
+        <ion-item-divider>
+          <ion-label color="medium">Dashboard</ion-label>
+        </ion-item-divider>
+        <!-- items in this group -->
+        <ion-menu-toggle>
+          <ion-item routerLink="/home">
+            <ion-icon name="home" slot="start" color="de"></ion-icon>
+            <ion-label color="medium">Home</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="/home/cashout">
+            <ion-icon name="basket" slot="start" color="de"></ion-icon>
+            <ion-label color="medium">Commission</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="/home/userinfo">
+            <ion-icon name="person" slot="start" color="de"></ion-icon>
+            <ion-label color="medium">Update Profile</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-item-group>
+
+      <ion-item-group>
+        <ion-item-divider>
+          <ion-label color="medium">Transactions</ion-label>
+        </ion-item-divider>
+        <!-- items in this group -->
+        <ion-menu-toggle>
+          <ion-item routerLink="/home/agencycodes">
+            <ion-icon name="trail-sign" slot="start" color="de"></ion-icon>
+            <ion-label color="medium">Agency Codes</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="">
+            <ion-icon name="logo-markdown" slot="start" color="de"></ion-icon>
+            <ion-label color="medium">Deposits</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="">
+            <ion-icon name="briefcase" slot="start" color="de"></ion-icon>
+            <ion-label color="medium">Loans</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-item-group>
+
+      <ion-item-group>
+        <ion-item-divider>
+          <ion-label color="medium">Reports</ion-label>
+        </ion-item-divider>
+        <!-- items in this group -->
+        <ion-menu-toggle>
+          <ion-item routerLink="">
+            <ion-icon name="pie-chart" slot="start" color="de"></ion-icon>
+            <ion-label color="medium">Deposits Commission</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="">
+            <ion-icon name="stats-chart" slot="start" color="de"></ion-icon>
+            <ion-label color="medium">Loans Commission</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="">
+            <ion-icon name="trending-down" slot="start" color="de"></ion-icon>
+            <ion-label color="medium">Transaction Trail</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-item-group>
+
+      <ion-item-group>
+        <ion-item-divider>
+          <ion-label color="medium">Misc.</ion-label>
+        </ion-item-divider>
+        <!-- items in this group -->
+        <ion-menu-toggle>
+          <ion-item routerLink="">
+            <ion-icon name="cog" slot="start" color="de"></ion-icon>
+            <ion-label color="medium">Settings</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="">
+            <ion-icon name="earth" slot="start" color="de"></ion-icon>
+            <ion-label color="medium">About De</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+        <ion-menu-toggle>
+          <ion-item routerLink="">
+            <ion-icon name="lock-open" slot="start" color="de"></ion-icon>
+            <ion-label color="medium" (click)="endSession()">Logout</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+      </ion-item-group>
+
+    </ion-list>
+  </ion-content>
+  <!-- end content -->
+</ion-menu>

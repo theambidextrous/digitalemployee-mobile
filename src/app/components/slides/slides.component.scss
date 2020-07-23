@@ -1,0 +1,30 @@
+ion-slides {
+  height: 70%;
+  padding-top: 30%;
+  .swiper-slide {
+    display: block;
+  }
+  .swiper-slide h2 {
+    margin-top: 0.8rem;
+  }
+  .swiper-slide img {
+    // margin: 60px 0 40px;
+    pointer-events: none;
+  }
+  img{
+    width: 120px;
+  }
+  b {
+    font-weight: 500;
+  }
+  p {
+    padding: 0 40px;
+    font-size: 14px;
+    line-height: 1.5;
+    padding: 5%;
+    color: var(--ion-color-step-600, #60646b);
+  }
+  p b {
+    color: var(--ion-text-color, #000000);
+  }
+}

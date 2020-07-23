@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar color="de">
+    <ion-title>Complete Profile</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form class="padds">
+    <ion-list>
+      <!-- Fname -->
+      <ion-item>
+        <ion-label position="floating" color="de">
+          First Name
+        </ion-label>
+        <ion-input type="text" aria-autocomplete="off" name="fname" class="inputs" [(ngModel)]="postData.fname"></ion-input>
+      </ion-item>
+      <!-- Mname -->
+      <ion-item>
+        <ion-label position="floating" color="de">
+          Middle Name
+        </ion-label>
+        <ion-input type="text" aria-autocomplete="off" name="mname" class="inputs" [(ngModel)]="postData.mname"></ion-input>
+      </ion-item>
+      <!-- sname -->
+      <ion-item>
+        <ion-label position="floating" color="de">
+          Sir Name
+        </ion-label>
+        <ion-input type="text" aria-autocomplete="off" name="sname" class="inputs" [(ngModel)]="postData.sname"></ion-input>
+      </ion-item>
+      <!-- phone -->
+      <ion-item>
+        <ion-label position="floating" color="de">
+          Mobile Phone Number
+        </ion-label>
+        <ion-input type="text" aria-autocomplete="off" name="phone" class="inputs" [(ngModel)]="postData.phone"></ion-input>
+      </ion-item>
+      <!-- national id/ passport -->
+      <ion-item>
+        <ion-label position="floating" color="de">
+         National ID /Passport No.
+        </ion-label>
+        <ion-input type="text" aria-autocomplete="off" name="national_id" class="inputs" [(ngModel)]="postData.national_id"></ion-input>
+      </ion-item>
+      <!-- next_of_kin_name -->
+      <ion-item>
+        <ion-label position="floating" color="de">
+          Next of Kin Name
+        </ion-label>
+        <ion-input type="text" aria-autocomplete="off" name="next_of_kin_name" class="inputs" [(ngModel)]="postData.next_of_kin_name"></ion-input>
+      </ion-item>
+      <!-- next_of_kin_email -->
+      <ion-item>
+        <ion-label position="floating" color="de">
+          Next of Kin Email
+        </ion-label>
+        <ion-input type="text" aria-autocomplete="off" name="next_of_kin_email" class="inputs" [(ngModel)]="postData.next_of_kin_email"></ion-input>
+      </ion-item>
+      <!-- button -->
+      <ion-button shape="round" color="de" class="btn-style" (click)="userinfoAction()">
+        Update Now!
+      </ion-button>
+    </ion-list>
+  </form>
+</ion-content>

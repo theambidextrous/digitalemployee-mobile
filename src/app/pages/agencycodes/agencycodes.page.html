@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar color="de">
+    <ion-title>Agency Codes</ion-title>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="main-menu"></ion-menu-button>
+    </ion-buttons>
+    <ion-buttons slot="primary">
+      <ion-menu-button routerLink="/cashout">
+        <ion-icon name="wallet" item-right></ion-icon>
+      </ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <!-- card -->
+    <ion-card class="card-content">
+      <ion-card-header>
+        <ion-card-subtitle class="spc-top center">What is this?</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content class="crd center">
+       Agency codes are like referral codes. You issue them to customers. Customers use these codes to acknowledge that <ion-label color="de">you</ion-label> encouraged them to make the <ion-label color="de">deposit</ion-label>. This way you earn a commission.<br><br>
+      </ion-card-content>
+      <!-- generrate code form -->
+      <form class="padds center">
+        <ion-card-title color="de center small">
+          <ion-label class="center">Generate Code(s)</ion-label>
+        </ion-card-title>
+        <ion-list>
+          <!-- no -->
+          <ion-item>
+            <ion-label position="floating" color="de">
+              Number Of codes
+            </ion-label>
+            <ion-input type="text" aria-autocomplete="off" name="numberofcodes" class="inputs" [(ngModel)]="postData.numberofcodes"></ion-input>
+          </ion-item>
+          <!-- button -->
+          <ion-button shape="round" color="de" class="btn-style" (click)="generateAction()">
+            <ion-icon item-left name="keypad"></ion-icon>
+            Generate Now!
+          </ion-button>
+          <p class="padds"></p>
+        </ion-list>
+      </form>
+      <!-- end generrate code form -->
+      <ion-card-title color="de center small">
+        <ion-label class="center">Your Current Code(s)</ion-label>
+      </ion-card-title>
+      <ion-grid class="grid-content center">
+        <ion-row>
+          <ion-col>
+            <ion-label color="dark">Codes</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label color="dark">Created On</ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-label color="delight">{{agent_codes?.agency_code}}</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-label color="delight">{{agent_codes?.date_code_created}}</ion-label>
+          </ion-col>
+        </ion-row>
+
+      </ion-grid>
+    </ion-card>
+    <!-- end card -->
+  </div>
+</ion-content>

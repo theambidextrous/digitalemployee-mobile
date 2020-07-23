@@ -1,0 +1,33 @@
+<ion-content>
+  <div class="center top-pad">
+    <app-logo></app-logo>
+    <!-- <h2>Sign In</h2> -->
+  </div>
+  <form class="padds">
+    <ion-list>
+      <!-- username -->
+      <ion-item>
+        <ion-label position="floating" color="de">
+          <ion-icon item-left name="person"></ion-icon>
+          Email Address
+        </ion-label>
+        <ion-input type="text" aria-autocomplete="off" name="username" class="inputs" [(ngModel)]="postData.username"></ion-input>
+      </ion-item>
+      <!-- password -->
+      <ion-item>
+        <ion-label position="floating" color="de">
+          <ion-icon item-left name="lock-closed"></ion-icon>
+          Password
+        </ion-label>
+        <ion-input type="password" aria-autocomplete="off" name="password" class="inputs" [(ngModel)]="postData.password"></ion-input>
+      </ion-item>
+      <!-- button -->
+      <ion-button shape="round" color="de" class="btn-style" (click)="loginAction()">
+        Sign In
+      </ion-button>
+      
+      <p class="router-link-p center">Don't have account? <a routerLink='/join'>Join Today!</a></p>
+
+    </ion-list>
+  </form>
+</ion-content>
